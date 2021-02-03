@@ -1,5 +1,5 @@
 
-import Login from "./components/modal";
+import Login from "./components/jobsPage/jobsPageHeading";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
-import Googlereducer  from "./reducer";
+import Googlereducer  from "./LoginRedux/reducer.js";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import thunk from "redux-thunk";

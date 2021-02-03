@@ -1,6 +1,6 @@
 import React from "react"
 import GoogleLogin from "react-google-login"
-import {googleAuthSuccess,googleAuthFailure} from "./redux/actionCreate"
+import {googleAuthSuccess,googleAuthFailure} from "../redux/LoginRedux/actionCreate"
 import { useDispatch, useSelector } from "react-redux";
 
 function Google ({className}){
