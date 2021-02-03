@@ -1,0 +1,21 @@
+.main{
+    width : 70%;
+    display : flex;
+    flex-direction : row;
+    margin :40px 25px;
+    cursor: pointer;
+}
+.main img{
+    margin : 15;
+    height: 150px;
+    margin-top: 15px;
+}
+.cont{
+    margin-left: 15px;
+}
+.body{
+    display : flex;
+    flex-direction : row;
+    justify-content:space-between;
+    margin-left: 15;
+}
