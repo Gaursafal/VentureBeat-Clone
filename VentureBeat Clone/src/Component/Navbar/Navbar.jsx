@@ -5,7 +5,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-//import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -23,18 +22,6 @@ const useStyles = makeStyles((theme) => ({
     },
     typo1: {
         marginLeft: 150
-    },
-    div :{
-        display : "flex",
-        flexDirection : "row",
-        marginTop : 30,
-    },
-    amazon : {
-        marginRight : 50,
-    },
-    rightCon : {
-        display : "flex",
-        flexDirection : "column"
     },
 }));
 
@@ -56,22 +43,6 @@ export default function Navbar() {
                             <MenuIcon />
                         </IconButton>
                     </Toolbar>
-                    <div className = {classes.div}>
-                        <div className = {classes.amazon}>
-                            <img width="800px" height = "500px" src="/amazon.jpg" alt="amazon" />
-                            <h1>Jeff Bezos announces plan to  step <br /> down as CEO, as Amazon's Q4 <br /> revenue eclipses $100 billion</h1>
-                        </div>
-                        <div className = {classes.rightCon}>
-                        <div>
-                            <img  width = "450px" src="/play-4.jpg" alt="play" />
-                            <h1>Playstudios will go public via <br/> SPAC at $1.1 billion valuation</h1>
-                        </div>
-                        <div>
-                            <img  width = "450px" src="/databricks.png" alt="play" />
-                            <h1>Databricks raises $1 billion <br/> funding round at $28 billion <br/> valuation</h1>
-                        </div>
-                        </div>
-                    </div>
                 </AppBar>
             </div>
         </div>
