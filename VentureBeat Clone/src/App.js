@@ -1,10 +1,10 @@
 import './App.css';
-import Footer from "./Component/Footer/Footer";
+import PageHead from './Component/Jobs/Jobs';
 
 function App() {
   return (
     <div className="App">
-      <Footer/>
+      <PageHead/>
     </div>
   );
 }
