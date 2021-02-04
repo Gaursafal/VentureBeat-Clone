@@ -10,18 +10,9 @@ import {getPosts} from '../Redux/actionCreator'
 
 const useStyles = makeStyles((theme) => ({
     root : {
-        marginTop:"30px"
+        marginTop:"50px"
     },
-    title: {
-        color:"rgb(77, 77, 79)",
-        fontSize:"30px",
-        // fontFamily:"Roboto, sans-serif",
-        fontWeight:"700",
-        textAlign:"left",
-        lineHeight:"34px",
-        cursor:"pointer",
-        textAlign:"left"   
-    },
+   
     footer : {
         marginTop:"10px",
         marginLeft:"20px"
@@ -61,11 +52,11 @@ const Posts = () => {
                     <Grid  item xs = {12}   md = {6} >
                        <Typography variant = "h4" className = {styles.title}>{post.title}</Typography>
                        <Grid container className = {classes.footer} xs = {12}>
-                       <Grid className = {styles.author} item >
-                           <Typography>{post.author}</Typography>
+                       <Grid  item >
+                           <Typography className = {styles.author}>{post.author}</Typography>
                        </Grid>
-                       <Grid item className = {styles.date}>
-                          <Typography>{post.date} </Typography>
+                       <Grid item >
+                          <Typography className = {styles.date}>{post.date} </Typography>
                        </Grid>
                     </Grid>
                    

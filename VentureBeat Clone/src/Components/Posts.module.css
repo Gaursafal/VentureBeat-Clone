@@ -13,8 +13,8 @@
 }
 .author {
   font-weight: 700 !important;
-  color: rgb(31, 31, 32);
-  font-size: 20px !important;
+  color: rgb(33, 0, 0);
+  font-size: 16px !important;
   cursor: pointer;
 }
 .date {
@@ -27,18 +27,26 @@
 }
 
 .title {
-  color: rgb(77, 77, 79);
+  color: rgb(33, 0, 0);
   font-size: 30px !important;
   font-weight: 700 !important;
   text-align: left;
   line-height: 28px;
   cursor: pointer;
+  line-height: 34px;
+}
+.title:hover {
+  color: rgb(77, 77, 79);
 }
 
 @media (max-width: 600px) {
   .title {
-    font-weight: 26px !important;
+    font-size: 24px !important;
+    margin-top: 10px !important;
     text-align: center;
+  }
+  .author {
+    margin-left: 50px !important;
   }
 }
 
