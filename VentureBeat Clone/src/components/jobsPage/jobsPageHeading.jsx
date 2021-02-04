@@ -1,8 +1,10 @@
-import React from "react"
+import {React,useState,useEffect} from "react"
 import {styled, TextField,Grid,Button} from "@material-ui/core"
 import Styled from "styled-components"
 import { makeStyles } from '@material-ui/core/styles';
-
+import styles from "./jobsPage.module.css"
+import {useDispatch,useSelector} from "react-redux"
+import {getJobsData} from "../../redux/JobsRedux/actionCreate.js"
 const Heading=Styled.div`
 margin-top:50px;
 text-align:center;
@@ -49,27 +51,47 @@ const useStyles = makeStyles((theme) => ({
 
 function PageHead (){
     const classes = useStyles();
+    const [title,setTitle]=useState("")
+    const [location,setLocation]=useState("")
+    const jobsData=useSelector(state=>state.jobs.jobsData)
+    const dispatch=useDispatch()
+
+   useEffect(()=>{
+    dispatch(getJobsData())
+   },[])
+   
+   
+    const handleSearch=(e)=>{
+        e.preventDefault()
+        //data filtering
+        const filteredData=jobsData.filter(el=>el.profile_name === title && el.location === location)
+        
+        console.log(filteredData)
+
+    }
+    console.log(title,location)
+    console.log(jobsData)
     return(
     <>
-    <div style={{background:"url("+"https://dy793rr2xtptx.cloudfront.net/images2/topic/new/venturebeat-banner-1552689220310.jpg"+") " ,backgroundRepeat:"no-repeat", height:"400px"}} className={classes.root}>
+    <div  className={classes.root} className={styles.backgroundImg}>
         <br/>
         <Heading>VentureBeat Careers</Heading>
         <SearchBox>
-        <form action="">
+        <form >
         <Grid container spacing={1}>
 
 
             <Grid item xs={12} sm={12} md={5} lg={5}>
 
-             <TextField  className={classes.input} id="filled-basic" label="Filled" variant="outlined" />
+             <TextField  className={classes.input} id="filled-basic" label="Filled" variant="outlined" value={title} onChange={(e)=>setTitle(e.target.value)} />
             </Grid>
 
 
             <Grid item xs={12} sm={12} lg={4} md={4}>
-            <TextField className={classes.input} id="filled-basic" label="Search Location" variant="outlined" />
+            <TextField className={classes.input} id="filled-basic" label="Search Location" variant="outlined" value={location} onChange={(e)=>setLocation(e.target.value)} />
             </Grid>
        <Grid item xs={12} sm={12} lg={3} md={3}>
-       <Button style={{height:"55px"}} className={classes.input} variant="contained" color="secondary">
+       <Button onClick={handleSearch} style={{height:"55px"}} className={classes.input} variant="contained" color="secondary">
              SEARCH
         </Button>
        </Grid>

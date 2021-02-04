@@ -1,0 +1,16 @@
+.backgroundImg{
+    background:url(https://dy793rr2xtptx.cloudfront.net/images2/topic/new/venturebeat-banner-1552689220310.jpg)  ;
+    background-repeat:"no-repeat";
+    height:400px
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .backgroundImg {
+        height:500px;
+    }
+}
+@media (max-width: 480px) {
+    .backgroundImg {
+        height:500px;
+    } 
+}
