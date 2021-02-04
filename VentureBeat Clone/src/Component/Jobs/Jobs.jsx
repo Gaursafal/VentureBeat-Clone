@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react"
-import { styled, TextField, Grid, Button } from "@material-ui/core"
+import { styled, TextField, Grid, Button, Link } from "@material-ui/core"
 import Styled from "styled-components"
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -134,7 +134,7 @@ function PageHead() {
                 <Button className={classes.jobs} variant="contained" color="secondary">View 60 Jobs</Button>
             </div>
 
-            {/* Card 1 Start */}
+{/* Card 1 Start */}
             <div className={styles.cardClass}>
                 <Card className={classes.card}>
                     <CardActionArea>
@@ -221,10 +221,10 @@ function PageHead() {
                     </CardActions>
                 </Card>
             </div>
-            {/* Card 1 End */}
+{/* Card 1 End */}
 
 
-            {/* Card 2 Start */}
+{/* Card 2 Start */}
             <div className={styles.cardClass}>
                 <Card className={classes.card}>
                     <CardActionArea>
@@ -311,30 +311,29 @@ function PageHead() {
                     </CardActions>
                 </Card>
             </div>
-            {/* Card 2 End */}
+{/* Card 2 End */}
 
 
-            <div style = {{display : "flex", flexDirection : "row", marginLeft : "150px", marginRight : "50px", marginTop : "150px"}}>
-               
-{/* Companies Start */} 
+            <div style={{ display: "flex", flexDirection: "row", marginLeft: "150px", marginRight: "50px", marginTop: "150px" }}>
+{/* Companies Start */}
                 <div>
                     <Typography variant="h6" color="initial">Companies</Typography>
                     <div className={styles.companies}>
-                        <img className = {styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/heineken-logo-1612351275607.png" alt="heins" />
+                        <img className={styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/heineken-logo-1612351275607.png" alt="heins" />
                         <div className={styles.jobs}>
                             <Typography variant="body2">Heineken</Typography>
                             <Typography variant="body2">2432 Jobs</Typography>
                         </div>
                     </div>
                     <div className={styles.companies}>
-                        <img className = {styles.jobsImg} src="https://neuvoo.com/img/logos/reynolds-and-reynolds.png?empname=Reynolds%20&%20Reynolds" alt="heins" />
+                        <img className={styles.jobsImg} src="https://neuvoo.com/img/logos/reynolds-and-reynolds.png?empname=Reynolds%20&%20Reynolds" alt="heins" />
                         <div className={styles.jobs}>
                             <Typography variant="body2">Reynolds & Reynolds</Typography>
                             <Typography variant="body2">View Channel</Typography>
                         </div>
                     </div>
-                    <div className = {styles.viewMore}>
-                    <Button color = "secondary">View more</Button>
+                    <div className={styles.viewMore}>
+                        <Button color="secondary">View more</Button>
                     </div>
                 </div>
 {/* Companies End */}
@@ -343,37 +342,150 @@ function PageHead() {
 {/* Jobs Feed Start */}
                 <div>
                     <Typography variant="h6" color="initial">Job Feed</Typography>
-                    <div className = {styles.jobsFeed}>
-                        <img className = {styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
+                    <div className={styles.jobsFeed}>
+                        <img className={styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
                         <div className={styles.jobs}>
                             <Typography variant="h6">Development Chemist II</Typography>
-                            <Typography variant="body2" style = {{"wordSpacing": "20px"}}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
+                            <Typography variant="body2" style={{ "wordSpacing": "20px" }}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
                         </div>
                     </div>
 
-                    <div className = {styles.jobsFeed}>
-                        <img className = {styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
+                    <div className={styles.jobsFeed}>
+                        <img className={styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
                         <div className={styles.jobs}>
                             <Typography variant="h6">Development Chemist II</Typography>
-                            <Typography variant="body2" style = {{"wordSpacing": "20px"}}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
+                            <Typography variant="body2" style={{ "wordSpacing": "20px" }}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
                         </div>
                     </div>
 
-                    <div className = {styles.jobsFeed}>
-                        <img className = {styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
+                    <div className={styles.jobsFeed}>
+                        <img className={styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
                         <div className={styles.jobs}>
                             <Typography variant="h6">Development Chemist II</Typography>
-                            <Typography variant="body2" style = {{"wordSpacing": "20px"}}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
+                            <Typography variant="body2" style={{ "wordSpacing": "20px" }}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
                         </div>
                     </div>
                 </div>
 
 {/* Jobs Feed End */}
 
-               <div>
 
-               </div>
+{/* VB Card Start */}
+                <div className={styles.vb}>
+                    <div>
+                        <img style={{ borderRadius: "50px", marginLeft: "100px" }} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/venturebeat-logo-1552659737963.jpg" alt="vb" />
+                        <div className={styles.vbCard}>
+                            <Typography variant="h6" color="textPrimary">Venture Beat Jobs</Typography>
+                            <Typography variant="h6">Board</Typography>
+                            <Typography variant="body3">Reach the tech sector</Typography>
+                            <div className={styles.alertBtn}>
+                                <Button variant="contained" color="secondary" className={styles.alertBtn}>Subscribe To Alerts</Button>
+                            </div>
+                            <Button variant="contained" color="inherit">Advertise Now</Button>
+                        </div>
+                    </div>
+                </div>
+{/* VB Card End */}
             </div>
+
+{/* Footer Start */}
+            <div className={styles.footerBlock}>
+                <div className={styles.about}>
+                    <Button className={styles.about} style={{ color: "whitesmoke" }}>About</Button><br></br>
+                    <Button className={styles.about} style={{ color: "whitesmoke" }}>Pricing</Button>
+                </div>
+                <div>
+                    <Typography>
+                        VentureBeat and Jobbio have joined forces to create a digital careers marketplace <br />
+                        targeting VentureBeat's 12 million monthly readers.
+                        </Typography>
+                    <br />
+                    <br />
+                    <Typography>
+                        For companies, it means access to an incredible audience of engaged passive and<br />
+                        active candidates and is part of Jobbio’s ongoing strategy to reach high quality <br />
+                        candidates through exclusive media partnerships. It is powered by Jobbio’s <br />
+                        innovative channel technology which allows job seekers to apply for open roles using <br />
+                        new or existing Jobbio profiles.
+                        </Typography>
+                </div>
+            </div>
+{/* footer End */}
+
+
+{/* footer Card Start */}
+            <div className={styles.cardClass}>
+                <Card className={classes.card}>
+                    <div className = {styles.footercard}>
+                    <Typography variant="h6">Single Job Posting</Typography>
+                    </div>
+                    <CardContent>
+                        <Typography variant="body1" color="textSecondary" className={styles.cardContent}>
+                            Advertise 1 roles for 30 days to ensure <br />
+                             they're seen by over 12 million visitors a <br />
+                              month from across the world.
+                        </Typography>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </CardContent>
+                    <Button className={styles.btn} variant="contained" color="secondary"> Post a Job $499</Button>
+                </Card>
+
+                <Card className={classes.card}>
+                    <div className = {styles.footercard}>
+                    <Typography variant="h6">Unlimited Job Postings</Typography>
+                    </div>
+                    <CardContent>
+                        <Typography variant="body1" color="textSecondary" className={styles.cardContent}>
+                        Post unlimited jobs and let our <br />
+                        technology match your roles to the <br />
+                        Jobbio talent base & VentureBeat's<br/>
+                        engaged audience of developers, tech<br/>
+                        enthusiasts, and business leaders.
+                        </Typography>
+                        <br/>
+                    </CardContent>
+                    <Button className={styles.btn} variant="contained" color="secondary"> Advertise now for $599 </Button>
+                </Card>
+
+
+                <Card className={classes.card}>
+                <div className = {styles.footercard}>
+                    <Typography variant="h6">Premium Job Posting</Typography>
+                    </div>
+                    <CardContent>
+                        <Typography variant="body1" color="textSecondary" className={styles.cardContent}>
+                        Post unlimited jobs and let our <br />
+                        technology match your roles to the <br />
+                        Jobbio talent base & VentureBeat's<br/>
+                        engaged audience of developers, tech<br/>
+                        enthusiasts, and business leaders.
+                        </Typography>
+                        <br/>
+                    </CardContent>
+                    <Button className={styles.btn} variant="contained" color="secondary">Request a calllback</Button>
+                </Card>
+            </div>
+{/* footer Card End */}
+
+
+{/* footer Text Start */}
+   <div className  = {styles.footerText}>
+       <Typography variant = "h4" color="textSecondary">Get Your Job Out There</Typography><br/>
+       <Typography variant = "h6" color="textSecondary">Post your job in our dedicated careers sections for 30 days.</Typography><br/>
+       <Button variant="contained" color="secondary">Add My Job</Button>
+   </div>
+{/* footer Text End */}
+
+    <div className ={styles.footerEnd}>
+                <Typography>© 2021 Jobbio</Typography>
+                <Typography>Privacy Policy</Typography>
+                <Typography>Cookie Policy</Typography>
+                <Typography>Use Policy</Typography>
+                <Typography>Terms & Condition</Typography>
+    </div>
+
         </>
     )
 }

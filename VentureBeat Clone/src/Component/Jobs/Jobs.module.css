@@ -96,7 +96,71 @@
 .jobsFeed{
     border: 1px solid whitesmoke;
     width: 500px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+
+.vb{
+    border: 1px;
+    width: 300px;
+    height: 330px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+.vbCard{
+    text-align: center;
+    margin-top: 20px;
+}
+.alertBtn{
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.footerBlock{
+    border: 1px solid;
+    width: 100%;
+    height: 280px;
+    background-color: #ed2124;
+    display: flex;
+    flex-direction: row;
+    padding-top: 110px;
+    color: whitesmoke;
+}
+
+.about{
+    border: 1px solid whitesmoke;
+    width: 250px;
+    height: 60px;
+    background-color: #ed2124;
+    margin-right: 100px;
+    margin-left: 250px;
+    color: whitesmoke;
+    border-radius: 7px;
+}
+
+.footercard{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footerText{
+    margin-top: 200px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.footerEnd{
+    border: 1px solid #ed2124;
+    background-color: #ed2124;
+    width: 100%;
     height: 100px;
     display: flex;
     flex-direction: row;
+    text-decoration: none;
+    color: whitesmoke;
 }
