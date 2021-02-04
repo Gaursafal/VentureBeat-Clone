@@ -30,6 +30,7 @@ export const MachinsPage = ()=>{
         dispatch(machinData())
         
         
+        
     },[])
     React.useEffect(()=>{
         handleData()
