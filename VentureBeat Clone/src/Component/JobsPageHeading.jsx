@@ -2,6 +2,7 @@ import {React,useState,useEffect} from "react"
 import {styled, TextField,Grid,Button} from "@material-ui/core"
 import Styled from "styled-components"
 import { makeStyles } from '@material-ui/core/styles';
+import {useHistory} from "react-router-dom"
 import styles from "../Css/jobsPage.module.css"
 import {useDispatch,useSelector} from "react-redux"
 import { getJobsData,jobsDataFiltered } from "../Redux/JobsRedux/actionCreate";
@@ -55,25 +56,23 @@ function PageHead (){
     const [title,setTitle]=useState("")
     const [location,setLocation]=useState("")
     const jobsData=useSelector(state=>state.jobs.jobsData)
-    const dispatch=useDispatch()
-    const [filterData,setFilterData]=useState([])
-   
-    useEffect(()=>{
-    dispatch(getJobsData())
-   },[])
+    const dispatch = useDispatch()
+    
+    const history=useHistory()
+      useEffect(()=>{
+      dispatch(getJobsData())
+    },[])
    
    
     const handleSearch=(e)=>{
         e.preventDefault()
         //data filtering
-        const filteredData=jobsData.filter(el=>el.profile_name === title && el.location === location)
-        setFilterData(filteredData)
-        console.log(filteredData)
-        dispatch(jobsDataFiltered(filterData))
-
+        const filteredData=jobsData.filter(el=>el.profile_name === title || el.location === location)
+        dispatch(jobsDataFiltered(filteredData))
+        history.push("/searchResults")
     }
-    console.log(title,location)
-    console.log(jobsData)
+
+   
     return(
     <>
     <div  className={classes.root} className={styles.backgroundImg}>

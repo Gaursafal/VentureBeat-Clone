@@ -7,10 +7,10 @@ function SearchResults (){
     return(
         <>
         <div>
-            {filteredData && filteredData.map(data=>({
-                
+            {filteredData.map(data=>(
+                <div>{data.profile_name}</div>
 
-            }))}
+            ))}
         </div>
         </>
     )

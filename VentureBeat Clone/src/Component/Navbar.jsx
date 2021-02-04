@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-
+import {useSelector} from "react-redux"
 const useStyles = makeStyles((theme) => ({
     container: {
         width : "100%",
@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
     },
     typo: {
-        marginRight: 20,
+       // marginRight: 20,
+        padding:10,
         textDecoration : "none"
     },
     typo1: {
@@ -32,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
     const classes = useStyles();
+    const isAuth=useSelector(state=>state.google.isAuth)
+    console.log(isAuth)
     return (
         <div>
             <div className={classes.root}>
@@ -43,7 +46,7 @@ export default function Navbar() {
                       <Link to= "/jobs"> <Typography variant="h6" color = "inherit"  className={classes.typo}> Jobs </Typography></Link>
                       <Link to = "/issues"> <Typography variant="h6" color = "inherit"  className={classes.typo}> Special Issue </Typography></Link>
                       <Link to="/member"> <Typography variant="h6" color = "inherit"  className={classes.typo1}> Become a Member |</Typography></Link>
-                      <Link to = "/signin"> <Typography variant="h6" color = "inherit"  className={classes.typo}> Sign in </Typography></Link>
+                      <Link> <Typography variant="h6" color = "inherit"  className={classes.typo}> {!isAuth?"Sign in":"Sign out"} </Typography></Link>
                         <IconButton edge="start" className={classes.menuButton}  aria-label="menu">
                             <MenuIcon />
                         </IconButton>

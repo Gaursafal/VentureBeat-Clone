@@ -35,7 +35,7 @@ export default function Navpage() {
         <div>
             
             <div className={classes.root}>
-                <Container className={classes.container} style={{ backgroundColor: "#1a237e" }}>
+                <div className={classes.container} style={{ backgroundColor: "#1a237e" }}>
                     <div><Navbar/></div>
                     <div className = {classes.div}>
                         <div className = {classes.amazon}>
@@ -53,7 +53,7 @@ export default function Navpage() {
                         </div>
                         </div>
                     </div>
-                </Container>
+                </div>
             </div>
         </div>
     );

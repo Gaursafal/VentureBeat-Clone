@@ -9,6 +9,7 @@ import { Discover } from '../Pages/Discover';
 import { GamesPage } from '../Pages/GamesPage';
 import { HomePage } from '../Pages/HomePage';
 import { MachinsPage } from '../Pages/MachinsPage';
+import SearchResults from "../Component/jobsSearchResult"
 
 
 export const Routes = ()=>{
@@ -21,6 +22,8 @@ export const Routes = ()=>{
             <Route path = "/ai/:id" exact render = {(props)=><CradItem {...props}/>}/>
             <Route path = "/machin/discover" exact render = {()=><Discover/>}/>
             <Route path = "/signin" exact render = {()=><Login/>}/>
+            <Route path = "/member" exact render = {()=><Login/>}/>
+            <Route path = "/searchResults" exact render = {()=><SearchResults/>}/>
         </div>
     )
 }
