@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import JobsFilter from './Components/JobsFilter'
+
+import Login from "./components/jobsPage/jobsPageHeading";
 
 function App() {
   return (
     <div className="App">
-    <JobsFilter/>
+        <Login/>
+
     </div>
+
   );
 }
 
