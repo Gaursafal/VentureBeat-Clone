@@ -5,7 +5,7 @@
   margin: 10px !important;
 }
 .root {
-  max-width: 325px;
+  min-width: 265px;
   margin: 30px;
   display: flex;
   flex-direction: column;

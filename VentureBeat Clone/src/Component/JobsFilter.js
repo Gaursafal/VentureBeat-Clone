@@ -7,10 +7,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import styles from './JobFilter.module.css'
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
-
+import styles from '../Css/JobFilter.module.css'
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
@@ -34,8 +33,8 @@ const useStyles = makeStyles({
 function JobsFilter() {
 const classes = useStyles();
 const [date, setDate] = useState('')
-
 const [contract, setContract] = useState('')
+
 console.log(contract)
 console.log(date)
 
@@ -49,76 +48,7 @@ console.log(date)
             </CardActions>
 
             <div className = {styles.formBox}>
-           
-                         
-            {/* <FormControlLabel
-            control={<Checkbox  name="all" />}
-            label={<span style={{ fontSize: '12px' }}>All</span>}
-            value = 'all'
-            className = {styles.formElement}
-            checked = {contract.all}
-            onChange = {handleChange}
-            />
-
-            <FormControlLabel
-            control={<Checkbox  name="checkedA" />}
-            label={<span style={{ fontSize: '12px' }}>full-time</span>}
-            value = 'fullTime'
-            className = {styles.formElement}
-            checked = {contract.fullTime}
-            />
-
-            <FormControlLabel
-            control={<Checkbox  name="checkedA" />}
-            label={<span style={{ fontSize: '12px' }}>Contract</span>}
-            value = 'contract'
-            className = {styles.formElement}
-            checked = {contract.contract}
-            />
-
-            
-            <FormControlLabel
-            control={<Checkbox  name="checkedA" />}
-            label={<span style={{ fontSize: '12px' }}>Temporary</span>}
-            value = 'temporary'
-            className = {styles.formElement}
-            checked = {contract.temporary}
-            />
-
-            <FormControlLabel
-            control={<Checkbox  name="checkedA" />}
-            label={<span style={{ fontSize: '12px' }}>part-time</span>}
-            value = 'partTime'
-            className = {styles.formElement}
-            checked = {contract.partTime}
-            />
-
-            <FormControlLabel
-            control={<Checkbox  name="checkedA" />}
-            label={<span style={{ fontSize: '12px' }}>internship</span>}
-            value = "internship"
-            className = {styles.formElement}
-            checked = {contract.internship}
-            />
-
-            <FormControlLabel
-            control={<Checkbox  name="checkedA" />}
-            label={<span style={{ fontSize: '12px' }}>flexible</span>}          
-            value = 'flexible'
-            className = {styles.formElement}
-            checked = {contract.flexible}
-            />
-
-            <FormControlLabel
-            control={<Checkbox  name="checkedA" />}
-            label={<span style={{ fontSize: '12px' }}>Remote-part-time</span>}
-            value = "remotePartTime"
-            className = {styles.formElement}
-            checked = {contract.remotePartTime}
-            /> */}
-
-            <FormControl component="fieldset">
-           
+            <FormControl component="fieldset">          
            <RadioGroup aria-label="date-posted" name="date" onChange = {(e) => setContract(e.target.value)}>
                <FormControlLabel value="all" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>All</span>}  className = {styles.formElement}/>
                <FormControlLabel value="fullTime" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>full-time</span>}  className = {styles.formElement}/>
@@ -129,14 +59,10 @@ console.log(date)
                <FormControlLabel value="flexible" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>Flexible</span>}  className = {styles.formElement}/>
                <FormControlLabel value="remotePartTime" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>Remote Part Time</span>}  className = {styles.formElement}/>
            </RadioGroup>
-           </FormControl>    
-          
-            </div>     
-           
-        </CardContent>
-      
+           </FormControl>             
+            </div>               
+        </CardContent>    
         </Card>
-
         <Card className={classes.root}>
             <CardContent>
             <CardActions>
