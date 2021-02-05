@@ -3,14 +3,242 @@
     background-repeat:"no-repeat";
     height:400px
 }
+.hide{
+    display: block;
+}
 
 @media (min-width: 481px) and (max-width: 1024px) {
     .backgroundImg {
         height:500px;
     }
+    .hide{
+        display:none;
+        
+    }
+    .jobsBox{
+        margin-left:0px;
+        
+    } 
+    .jobsFeed{
+        margin-left:0px;
+        width:300px
+
+    }
+    
+    
 }
 @media (max-width: 480px) {
     .backgroundImg {
         height:500px;
+    }
+    .hide{
+        display:none;
+        
+    }
+    .jobsBox{
+        margin:0px;
     } 
+    .jobsFeed{
+        margin-left:0px;
+        width:300px
+
+    }
+  
+    
+}
+
+
+.typo1{
+    text-align: center;
+    color: #636161;
+    font-weight: 300;
+    padding-top: 40px;
+}
+
+.airbnb{
+    background: url(https://dy793rr2xtptx.cloudfront.net/images2/topic/22904-banner.jpg);
+    background-repeat : "no-repeat";
+    height: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 6px;
+}
+.airbnbImg{
+    width: 90px;
+    border-radius: 50px;
+    margin: 7% 7% 2% 7%;
+}
+.airbnbText{
+    color: white;
+    padding-left: 7%;
+    padding-bottom: 2%;
+}
+
+.cardImg{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin-left:150px ;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    border: 1px solid chartreuse;
+    background-color:#1b5e20;
+}
+.cardClass{
+    border:1px solid green;
+    margin-top: 40px;
+    
+    margin-right: 30px;
+    width:100%;
+    
+}
+.cardContent{
+    font-size: 15px;
+}
+
+.companies{
+    border: 1px solid whitesmoke;
+    width: 290px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-right:50px
+}
+
+.jobs{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+
+.jobsImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+.viewMore{
+    padding: 30px 0px 50px 80px;
+}
+.boxs{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px; 
+    margin-right: 50px;
+    margin-top: 150px 
+}
+
+.jobsFeed{
+    border: 1px solid whitesmoke;
+    width: 400px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+  
+    margin:10px;
+}
+
+.vb{
+    border: 1px;
+    width: 300px;
+    height: 330px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+.vbCard{
+    text-align: center;
+    margin-top: 20px;
+}
+.alertBtn{
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.footerBlock{
+    border: 1px solid;
+    width: 100%;
+    height: auto;
+    background-color: #ed2124;
+    padding:20px;
+    padding-top: 110px;
+    color: whitesmoke;
+    display:flex;
+    flex-direction: row;
+    
+    margin-right:auto
+
+}
+.spaces{
+    margin-left: 10%;
+}
+
+.about{
+    border: 1px solid whitesmoke;
+    width: 250px;
+    height: 60px;
+    background-color: #ed2124;
+
+    margin-left: 30%;
+    margin-bottom:50px;
+    color: whitesmoke;
+    border-radius: 7px;
+}
+
+.footercard{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footerText{
+    margin-top: 200px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.footerEnd{
+    border: 1px solid #ed2124;
+    background-color: #ed2124;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: whitesmoke;
+    padding-left: 150px;
+}
+.jobsSearchCard{
+    border: 1px solid whitesmoke;
+    width: 300px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+  
+    margin:10px;
+}
+.text{
+    margin-left: 30px;
+    margin-top: 35px;
+}
+.link2{
+    color: white;
+    text-decoration: none;
+    
+}
+.icon{
+    margin-top: 35px;
+    float:right;
+    margin-left:10%
+}
+.linkIcon{
+    color: white;
+    
 }
