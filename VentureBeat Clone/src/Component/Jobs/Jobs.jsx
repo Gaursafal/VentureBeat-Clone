@@ -13,6 +13,10 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import StarIcon from '@material-ui/icons/Star';
 import GroupIcon from '@material-ui/icons/Group';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import RssFeedIcon from '@material-ui/icons/RssFeed';
 import styles from "./Jobs.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { getJobsData } from "../../redux/JobsRedux/actionCreate.js"
@@ -314,6 +318,96 @@ function PageHead() {
 {/* Card 2 End */}
 
 
+{/* Card 3 Start */}
+<div className={styles.cardClass}>
+                <Card className={classes.card}>
+                    <CardActionArea>
+                        <CardMedia
+                            className={classes.media}
+                            image="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/spotify-content-1587552188803.jpg"
+                            title="Contemplative Reptile"
+                        />
+                        <div>
+                            <img className={styles.cardImg} src="https://neuvoo.com/img/logos/spotify.png?empname=Spotify" alt="spotify" />
+                            <Typography variant="h6" style={{ textAlign: "center" }}>Spotify</Typography>
+                        </div>
+                        <CardContent>
+                            <Typography variant="h7" color="textSecondary" className={styles.cardContent}>
+                                <LocalOfferIcon style={{ width: "13px" }} />  Music <br />
+                                <LocationOnIcon style={{ width: "15px" }} /> Worldwide <br />
+                                < GroupIcon style={{ width: "15px" }} /> 1001-5000 employees <br />
+                                <StarIcon style={{ width: "15px" }} /> Diversity is nothing without inclusion <br />
+                                <ThumbUpAltIcon style={{ width: "15px" }} /> A Purpose-Driven Company
+                              </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button className={styles.btn} variant="contained" color="primary">
+                            View Compamany
+                          </Button>
+                    </CardActions>
+                </Card>
+
+
+                <Card className={classes.card}>
+                    <CardActionArea>
+                        <CardMedia
+                            className={classes.media}
+                            image="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/lockheed-martin-content-1603354746732.jpg"
+                            title="Contemplative Reptile"
+                        />
+                        <div>
+                            <img className={styles.cardImg} src="https://neuvoo.com/img/logos/appcast-cpc.png?empname=Lockheed%20Martin" alt="spotify" />
+                            <Typography variant="h6" style={{ textAlign: "center" }}>Lockheed Martin</Typography>
+                        </div>
+                        <CardContent>
+                            <Typography variant="h7" color="textSecondary" className={styles.cardContent}>
+                                <LocalOfferIcon style={{ width: "13px" }} />  Defence and Space <br />
+                                <LocationOnIcon style={{ width: "15px" }} /> Maryland, USA <br />
+                                < GroupIcon style={{ width: "15px" }} /> 10,001 + <br />
+                                <StarIcon style={{ width: "15px" }} /> Competitive Compensation and Benefits <br />
+                                <ThumbUpAltIcon style={{ width: "15px" }} /> Engineering a better tomorrow
+                              </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button className={styles.btn} variant="contained" color="secondary">
+                            View Compamany
+                          </Button>
+                    </CardActions>
+                </Card>
+
+                <Card className={classes.card}>
+                    <CardActionArea>
+                        <CardMedia
+                            className={classes.media}
+                            image="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/ceridian-content-1589470455263.jpg"
+                            title="Contemplative Reptile"
+                        />
+                        <div>
+                            <img className={styles.cardImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/ceridian-logo-1584530158844.jpg" alt="spotify" />
+                            <Typography variant="h6" style={{ textAlign: "center" }}>Ceridian</Typography>
+                        </div>
+                        <CardContent>
+                            <Typography variant="h7" color="textSecondary" className={styles.cardContent}>
+                                <LocalOfferIcon style={{ width: "13px" }} />  Consulting Tech <br />
+                                <LocationOnIcon style={{ width: "15px" }} /> Canada | Global<br />
+                                < GroupIcon style={{ width: "15px" }} /> 1001-5000 employees <br />
+                                <StarIcon style={{ width: "15px" }} /> Makes Work Life Better <br />
+                                <ThumbUpAltIcon style={{ width: "15px" }} /> Career growth & mobility
+                              </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button className={styles.btn} variant="contained" color="primary">
+                            View 11 Jobs
+                          </Button>
+                    </CardActions>
+                </Card>
+            </div>
+{/* Card 3 End */}
+
+
             <div style={{ display: "flex", flexDirection: "row", marginLeft: "150px", marginRight: "50px", marginTop: "150px" }}>
 {/* Companies Start */}
                 <div>
@@ -348,23 +442,7 @@ function PageHead() {
                             <Typography variant="h6">Development Chemist II</Typography>
                             <Typography variant="body2" style={{ "wordSpacing": "20px" }}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
                         </div>
-                    </div>
-
-                    <div className={styles.jobsFeed}>
-                        <img className={styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
-                        <div className={styles.jobs}>
-                            <Typography variant="h6">Development Chemist II</Typography>
-                            <Typography variant="body2" style={{ "wordSpacing": "20px" }}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
-                        </div>
-                    </div>
-
-                    <div className={styles.jobsFeed}>
-                        <img className={styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
-                        <div className={styles.jobs}>
-                            <Typography variant="h6">Development Chemist II</Typography>
-                            <Typography variant="body2" style={{ "wordSpacing": "20px" }}>Johnson-Controls  Not-Disclosed   Marinette</Typography>
-                        </div>
-                    </div>
+                    </div> 
                 </div>
 
 {/* Jobs Feed End */}
@@ -388,7 +466,7 @@ function PageHead() {
 {/* VB Card End */}
             </div>
 
-{/* Footer Start */}
+{/* Footer Block Start */}
             <div className={styles.footerBlock}>
                 <div className={styles.about}>
                     <Button className={styles.about} style={{ color: "whitesmoke" }}>About</Button><br></br>
@@ -410,7 +488,7 @@ function PageHead() {
                         </Typography>
                 </div>
             </div>
-{/* footer End */}
+{/* footer Block End */}
 
 
 {/* footer Card Start */}
@@ -424,6 +502,7 @@ function PageHead() {
                             Advertise 1 roles for 30 days to ensure <br />
                              they're seen by over 12 million visitors a <br />
                               month from across the world.
+                              
                         </Typography>
                         <br/>
                         <br/>
@@ -478,14 +557,45 @@ function PageHead() {
    </div>
 {/* footer Text End */}
 
-    <div className ={styles.footerEnd}>
-                <Typography>© 2021 Jobbio</Typography>
-                <Typography>Privacy Policy</Typography>
-                <Typography>Cookie Policy</Typography>
-                <Typography>Use Policy</Typography>
-                <Typography>Terms & Condition</Typography>
-    </div>
 
+{/* Footer Start */}
+    <div className ={styles.footerEnd}>
+                <div className = {styles.text}>
+                <Typography variant = "body2">© 2021 Jobbio</Typography>
+                </div>
+                <div className = {styles.text}>
+                <Typography variant = "body2"><Link style={{color:"white",textDecoration:"none"}}>Privacy Policy</Link></Typography>
+                </div>
+                <div className = {styles.text}>
+                <Typography variant = "body2"><Link style={{color:"white",textDecoration:"none"}}>Cookie Policy</Link></Typography>
+                </div>
+                <div className = {styles.text}>
+                <Typography variant = "body2"><Link style={{color:"white",textDecoration:"none"}}>Use Policy</Link></Typography>
+                </div>
+                <div className = {styles.text}>
+                <Typography variant = "body2"><Link style={{color:"white",textDecoration:"none"}}>Terms & Conditions</Link></Typography>
+                </div>
+
+
+                <div>
+                <div className = {styles.icon}>
+                        <Link to="/https://twitter.com/venturebeat">
+                            <FacebookIcon className = {styles.linkIcon} />
+                        </Link>
+                        <Link to="/https://twitter.com/venturebeat">
+                            <TwitterIcon className = {styles.linkIcon} />
+                        </Link>
+                        <Link to="/https://twitter.com/venturebeat">
+                            <InstagramIcon className = {styles.linkIcon} />
+                        </Link>
+                        <Link to="/https://twitter.com/venturebeat">
+                            <RssFeedIcon className = {styles.linkIcon} />
+                        </Link>
+                    </div>
+                </div>
+
+    </div>
+{/* Footer End */}
         </>
     )
 }

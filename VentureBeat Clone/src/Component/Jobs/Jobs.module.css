@@ -158,9 +158,27 @@
     border: 1px solid #ed2124;
     background-color: #ed2124;
     width: 100%;
-    height: 100px;
+    height: 90px;
     display: flex;
     flex-direction: row;
     text-decoration: none;
     color: whitesmoke;
+    padding-left: 150px;
+}
+.text{
+    margin-left: 30px;
+    margin-top: 35px;
+}
+.link2{
+    color: white;
+    text-decoration: none;
+    
+}
+.icon{
+    margin-top: 35px;
+    margin-left: 400px;
+}
+.linkIcon{
+    color: white;
+    margin-right: 20px;
 }
