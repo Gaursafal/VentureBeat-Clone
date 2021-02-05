@@ -20,12 +20,13 @@ const useStyles = makeStyles((theme) => ({
         marginLeft : 30
     },
     amazon : {
-        marginRight : 15,
+        marginRight : 35,
+        marginLeft  : 100
         
     },
     rightCon : {
         display : "flex",
-        flexDirection : "column"
+        flexDirection : "column",
     },
 }));
 
@@ -39,17 +40,17 @@ export default function Navpage() {
                     <div><Navbar/></div>
                     <div className = {classes.div}>
                         <div className = {classes.amazon}>
-                            <img width="800px" height = "500px" src="https://venturebeat.com/wp-content/uploads/2019/12/amazon-logo-reuters.jpg?resize=700%2C350&strip=all" alt="amazon" />
-                            <h1>Jeff Bezos announces plan to  step <br /> down as CEO, as Amazon's Q4 <br /> revenue eclipses $100 billion</h1>
+                            <img width="800px" height = "500px" src="https://venturebeat.com/wp-content/uploads/2020/12/dropbox.jpg?resize=700%2C350&strip=all" alt="amazon" />
+                            <h1>Dozens of current and former Dropbox <br/> employees allege gender discrimination</h1>
                         </div>
                         <div className = {classes.rightCon}>
                         <div>
-                            <img  width = "400px" src="https://venturebeat.com/wp-content/uploads/2021/02/graphql-feature.png?resize=700%2C350&strip=all" alt="play" />
-                            <h2>Playstudios will go public via <br/> SPAC at $1.1 billion valuation</h2>
+                            <img  width = "400px" src="https://venturebeat.com/wp-content/uploads/2021/02/Jared-Spataro-e1612526196407.jpg?resize=700%2C350&strip=all" alt="play" />
+                            <h2>Microsoft launches Viva, an AI-powered <br/> information hub for enterprises</h2>
                         </div>
                         <div>
                             <img  width = "400px" src="https://venturebeat.com/wp-content/uploads/2019/05/Google-Lens-translation.png?resize=350%2C175&strip=all" alt="play" />
-                            <h2>Databricks raises $1 billion <br/> funding round at $28 billion <br/> valuation</h2>
+                            <h2>Databricks raises $1 billion funding <br/> round at $28 billion valuation</h2>
                         </div>
                         </div>
                     </div>

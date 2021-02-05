@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from '../Css/GamesPage.module.css'
-
-import Footer from '../Component/Footer';
-import Navbar from '../Component/Navbar';
+import Footer from '../Component/Footer/Footer';
+import Navbar from '../Component/Navbar/Navbar';
 import Posts from '../Component/Posts';
 
 export const GamesPage = ()=>{

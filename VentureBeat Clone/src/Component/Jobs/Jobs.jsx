@@ -17,7 +17,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import RssFeedIcon from '@material-ui/icons/RssFeed';
-import styles from "./Jobs.module.css"
+import styles from "../../Css/Jobs.module.css"
 import { useDispatch, useSelector } from "react-redux"
 import { getJobsData } from "../../redux/JobsRedux/actionCreate.js"
 

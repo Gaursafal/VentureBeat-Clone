@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import styles from '../Css/CradItem.module.css'
 import { CommanAdd } from './CommanAdd'
-import Footer from './Footer'
-import Navbar from './Navbar'
+import Footer from './Footer/Footer'
+import Navbar from './Navbar/Navbar'
 import { VentureBeatAdd } from './VentureBeatAdd'
 export const CradItem = ()=>{
     const {id} = useParams()

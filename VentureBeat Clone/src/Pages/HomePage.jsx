@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../Component/Footer'
-import Navpage from '../Component/NavePage'
+import Footer from '../Component/Footer/Footer'
+import Navpage from '../Component/Navbar/NavePage'
 import Posts from '../Component/Posts'
 export const HomePage = ()=>{
     return(
