@@ -21,13 +21,8 @@ export const Routes = ()=>{
             <Route path = "/games" exact render = {()=><GamesPage/>}/>
             <Route path = "/ai/:id" exact render = {(props)=><CradItem {...props}/>}/>
             <Route path = "/machin/discover" exact render = {()=><Discover/>}/>
-<<<<<<< HEAD
             <Route path = "/signin" exact render = {()=><Login/>}/>
             <Route path = "/member"  render = {()=><Login/>}/>
-=======
-            <Route path = "/signin"  exact render = {()=><Login/>}/>
-            <Route path = "/member" render = {()=><Login/>}/>
->>>>>>> 1c61d01853754f9bf9af0a40efea0fcc8e36e189
             <Route path = "/searchResults" exact render = {()=><SearchResults/>}/>
         </div>
     )

@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import React from "react"
-import {useSelector} from "react-redux"
-import styles from "../Css/jobsPage.module.css"
-import {Typography} from "@material-ui/core"
-=======
 import React, {useState, useEffect} from "react"
 import {useDispatch,useSelector} from "react-redux"
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
+
+import {Card,Grid} from '@material-ui/core';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
@@ -20,7 +15,8 @@ import styles from '../Css/JobFilter.module.css'
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
->>>>>>> 1c61d01853754f9bf9af0a40efea0fcc8e36e189
+import FilteredCard from "./JobsfilterCards";
+
 
 function SearchResults (){
     var filteredData= useSelector(state=>state.jobs.filteredData)
@@ -34,21 +30,14 @@ function SearchResults (){
     console.log(filteredData)
     return(
         <>
+<Grid container spacing={1}>
+    <Grid item sm={6} md={3} lg={3}>
+
+
+
         <div style = {{display:"flex"}}>
 
         <div>
-<<<<<<< HEAD
-            {filteredData.map(data=>(
-                
-                <div className={styles.jobsSearchCard} key={data.job_id}>
-                <img className={styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
-                <div className={styles.jobs}>
-                    <Typography variant="h6">{data.profile_name}</Typography>
-                    <Typography variant="body2">{data.company_name}</Typography>
-                    <Typography variant="body2">{data.location}</Typography>
-                </div>
-            </div>
-=======
              <Card className={styles.root}>
             <CardContent>
             <CardActions>
@@ -101,7 +90,6 @@ function SearchResults (){
 
              {contract === "all" && filteredData.map(data=>(
                 <div>{data.profile_name}</div>
->>>>>>> 1c61d01853754f9bf9af0a40efea0fcc8e36e189
 
             ))}
 
@@ -126,6 +114,14 @@ function SearchResults (){
             </div>
             
         </div>
+
+        </Grid>
+
+        <Grid item sm={6} md={6} lg={6}>
+            <FilteredCard data={filteredData} />
+
+        </Grid>
+</Grid>
         </>
     )
 }
