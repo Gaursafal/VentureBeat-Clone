@@ -16,7 +16,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
 import FilteredCard from "./JobsfilterCards";
-
+import SearchBar from "./SearchBar"
 
 function SearchResults (){
     var filteredData= useSelector(state=>state.jobs.filteredData)
@@ -31,6 +31,8 @@ function SearchResults (){
     console.log(filteredData)
     return(
         <>
+        <SearchBar/>
+<br/>
 <Grid container spacing={1}>
     <Grid item sm={6} md={3} lg={3}>
 
@@ -60,22 +62,7 @@ function SearchResults (){
            </FormControl>             
             </div>               
         </CardContent>    
-        </Card>
-        <Card className={styles.root}>
-            <CardContent>
-            <CardActions>
-            <Typography variant = "p" className = {styles.subHeading}>Date Posted</Typography>
-            </CardActions>
-
-            <div className = {styles.formBox}>
-
-            
-            </div>     
-           
-        </CardContent>
-      
-        </Card>
-       
+        </Card> 
         </div>
         </div>
         </Grid>
