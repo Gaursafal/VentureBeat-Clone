@@ -4,7 +4,8 @@ import Styled from "styled-components"
 import { makeStyles } from '@material-ui/core/styles';
 import styles from "./jobsPage.module.css"
 import {useDispatch,useSelector} from "react-redux"
-import {getJobsData} from "../../redux/JobsRedux/actionCreate.js"
+// import {getJobsData} from "../../redux/JobsRedux/actionCreate.js"
+import {getJobsData} from '../../Redux/JobsRedux/actionCreate.js'
 const Heading=Styled.div`
 margin-top:50px;
 text-align:center;
