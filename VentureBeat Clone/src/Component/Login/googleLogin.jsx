@@ -19,6 +19,7 @@ function Google ({className}){
     const failureGoogle=(response)=>{
         console.log(response.Fs)
         dispatch(googleAuthFailure(response))
+        history.push("/jobs")
     }
     return(
         <>
