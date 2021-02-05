@@ -1,7 +1,7 @@
 import {React,useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {Modal,Button,Container} from "@material-ui/core";
-
+import {useHistory} from "react-router-dom"
 import Google from "./googleLogin"
 
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -67,18 +67,15 @@ function Login() {
   const [open, setOpen] = useState(true);
   const isAuth=useSelector((state)=>state.isAuth);
   console.log(isAuth)
+  const history=useHistory()
   const handleOpen = () => {
     setOpen(true);
   };
 
   const handleClose = () => {
-    if(isAuth){
-      setOpen(false);
-    }
-    else{
-      alert("Please Login!")
-    }
     
+      setOpen(false);
+    history.push("/")   
   };
 
   const body = (

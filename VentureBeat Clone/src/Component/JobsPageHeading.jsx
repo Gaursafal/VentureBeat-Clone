@@ -2,10 +2,16 @@ import {React,useState,useEffect} from "react"
 import {styled, TextField,Grid,Button} from "@material-ui/core"
 import Styled from "styled-components"
 import { makeStyles } from '@material-ui/core/styles';
-import styles from "./jobsPage.module.css"
+import {useHistory} from "react-router-dom"
+import styles from "../Css/jobsPage.module.css"
 import {useDispatch,useSelector} from "react-redux"
+<<<<<<< HEAD:VentureBeat Clone/src/components/jobsPage/jobsPageHeading.jsx
 // import {getJobsData} from "../../redux/JobsRedux/actionCreate.js"
 import {getJobsData} from '../../Redux/JobsRedux/actionCreate.js'
+=======
+import { getJobsData,jobsDataFiltered } from "../Redux/JobsRedux/actionCreate";
+// import {getJobsData} from "../../redux/JobsRedux/actionCreate"
+>>>>>>> 289d03766b5aadee651f35a502672c59abb0b6fc:VentureBeat Clone/src/Component/JobsPageHeading.jsx
 const Heading=Styled.div`
 margin-top:50px;
 text-align:center;
@@ -55,23 +61,23 @@ function PageHead (){
     const [title,setTitle]=useState("")
     const [location,setLocation]=useState("")
     const jobsData=useSelector(state=>state.jobs.jobsData)
-    const dispatch=useDispatch()
-
-   useEffect(()=>{
-    dispatch(getJobsData())
-   },[])
+    const dispatch = useDispatch()
+    
+    const history=useHistory()
+      useEffect(()=>{
+      dispatch(getJobsData())
+    },[])
    
    
     const handleSearch=(e)=>{
         e.preventDefault()
         //data filtering
-        const filteredData=jobsData.filter(el=>el.profile_name === title && el.location === location)
-        
-        console.log(filteredData)
-
+        const filteredData=jobsData.filter(el=>el.profile_name === title || el.location === location)
+        dispatch(jobsDataFiltered(filteredData))
+        history.push("/searchResults")
     }
-    console.log(title,location)
-    console.log(jobsData)
+
+   
     return(
     <>
     <div  className={classes.root} className={styles.backgroundImg}>
@@ -105,7 +111,5 @@ function PageHead (){
     </>
     )
 }
-
 export default PageHead
-
 //https://dy793rr2xtptx.cloudfront.net/images2/topic/new/venturebeat-banner-1552689220310.jpg
