@@ -4,7 +4,8 @@ import { useHistory } from 'react-router-dom'
 import Footer from '../Component/Footer'
 import Navbar from '../Component/Navbar'
 import { NewsCard } from '../Component/NewsCard'
-import {machinData}  from '../Redux/Machins/action.js'
+import { machinData } from '../redux/Machins/action'
+// import {machinData}  from '../Redux/Machins/action'
 export const Discover = ()=>{
     const dispatch = useDispatch()
     const datas = useSelector((state)=>state.ai.aiData)

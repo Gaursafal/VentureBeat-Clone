@@ -2,7 +2,7 @@ import React from "react"
 import GoogleLogin from "react-google-login"
 // import {googleAuthSuccess,googleAuthFailure} from "../redux/LoginRedux/actionCreate"
 import { useDispatch, useSelector } from "react-redux";
-import { googleAuthSuccess,googleAuthFailure } from "../../Redux/LoginRedux/actionCreate";
+import { googleAuthSuccess,googleAuthFailure } from "../../redux/LoginRedux/actionCreate";
 import {useHistory} from "react-router-dom"
 function Google ({className}){
     
@@ -14,6 +14,7 @@ function Google ({className}){
     const successGoogle=(response)=>{
       //  console.log(response.Fs)
       dispatch(googleAuthSuccess(response.Fs))
+      history.push("/jobs")
        
     }
     const failureGoogle=(response)=>{

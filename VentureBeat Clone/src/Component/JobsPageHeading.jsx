@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {useHistory} from "react-router-dom"
 import styles from "../Css/jobsPage.module.css"
 import {useDispatch,useSelector} from "react-redux"
-import { getJobsData,jobsDataFiltered } from "../Redux/JobsRedux/actionCreate";
+import { getJobsData,jobsDataFiltered } from "../redux/JobsRedux/actionCreate";
 // import {getJobsData} from "../../redux/JobsRedux/actionCreate"
 const Heading=Styled.div`
 margin-top:50px;

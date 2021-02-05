@@ -1,0 +1,39 @@
+.main{
+    width: 40%;
+    border: solid 0.5px grey;
+    border-radius: 15px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+.header{
+    text-align: center;
+}
+.header h1{
+    font-weight: 100;
+}
+.para{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+.red{
+    color: red;
+}
+.redback {
+    background-color: red;
+    color: white;
+}
+button{
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.cont {
+    margin-left: 25px;
+}

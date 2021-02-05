@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import styles from '../Css/Machins.module.css'
 import {useDispatch, useSelector} from 'react-redux';
-import { machinData}  from '../Redux/Machins/action.js';
+// import { machinData}  from '../Redux/Machins/action';
 import { Link, Route, useHistory } from 'react-router-dom';
 import { NewsCard } from '../Component/NewsCard';
 import Footer from '../Component/Footer';
 import Navbar from '../Component/Navbar';
+import { machinData } from '../redux/Machins/action';
 
 export const MachinsPage = ()=>{
     const button = ["Computer Vision",
