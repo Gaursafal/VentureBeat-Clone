@@ -241,4 +241,9 @@
 .linkIcon{
     color: white;
     
+
+}
+.card{
+    position: sticky;
+    top: 100px;
 }
