@@ -8,7 +8,7 @@ const initstate = {
     userData: [],
     isAuth:false
   };
-  const reducer = (state = initstate, { type, payload }) => {
+  const Googlereducer = (state = initstate, { type, payload }) => {
     switch (type) {
      
       case GOOGLE_AUTH_SUCCESS:
@@ -32,4 +32,4 @@ const initstate = {
     }
   };
 
-  export default reducer
+  export default Googlereducer

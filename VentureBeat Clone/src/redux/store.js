@@ -1,15 +1,21 @@
-import { createStore, applyMiddleware ,combineReducers} from "redux";
-import Googlereducer  from "./LoginRedux/reducer.js";
-import Jobsreducer from "./JobsRedux/reducer.js"
-import { composeWithDevTools } from "redux-devtools-extension";
+import {createStore, compose, applyMiddleware, combineReducers} from 'redux'
 
-import thunk from "redux-thunk";
+import thunk from 'redux-thunk';
+import Jobsreducer from './JobsRedux/reducer';
+import Googlereducer from './LoginRedux/reducer';
+import { machinReducer } from './Machins/reducer';
+import { Postreducer } from './PostsRedux/reducer';
 
-const rootReducer=combineReducers({
-  google:Googlereducer,
-  jobs:Jobsreducer
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const rootReducer = combineReducers({
+    post : Postreducer,
+    ai : machinReducer,
+    google : Googlereducer,
+    jobs : Jobsreducer
 })
+
 export const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
+    rootReducer,
+    composeEnhancers(applyMiddleware(thunk))
+)
