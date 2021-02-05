@@ -6,11 +6,11 @@ export const HomePage = ()=>{
     return(
         <>
         
-        <div>
-            <Navpage/>
-        </div>
-        <div><Posts/></div>
-        <div><Footer/></div>
+       
+        <Navpage/>
+      
+        <Posts/>
+       <Footer/>
         </>
     )
 }

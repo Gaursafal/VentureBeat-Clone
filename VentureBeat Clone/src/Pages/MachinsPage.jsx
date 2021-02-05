@@ -41,9 +41,10 @@ export const MachinsPage = ()=>{
         <>
             <header className = {styles.header}>
                 < >
-                <div>
+                <div style = {{ display:"flex", justifyContent:"center", alignItems:"center", width:"100%"}}>
                     <Navbar/>
                 </div>
+
                 <h1 className = {styles.heading}>The Machins</h1>
                 </>
                 <div className = {styles.clear}></div>
