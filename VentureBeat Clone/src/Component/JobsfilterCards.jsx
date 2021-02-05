@@ -3,10 +3,10 @@ import style from "../Css/jobsPage.module.css"
 import {Typography} from "@material-ui/core"
 function FilteredCard({data}){
 
-    const filteredData=data
+    console.log(data)
     return(<>
             <div>
-            {filteredData.map(data=>(
+            
                 
                 <div className={style.jobsSearchCard} key={data.job_id}>
                 <img className={style.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
@@ -17,7 +17,7 @@ function FilteredCard({data}){
                 </div>
             </div>
 
-            ))}
+        
         </div>
     </>)
 }

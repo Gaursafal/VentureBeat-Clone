@@ -23,6 +23,7 @@ function SearchResults (){
     
     const [date, setDate] = useState('')
     const [contract, setContract] = useState('all')
+
     const permanentJob = filteredData.filter(job => job.job_type === "Permanent Job")
     const internationalJob = filteredData.filter(job => job.job_type === "International")
     const remoteJob = filteredData.filter(job => job.job_type === "Work From Home")
@@ -68,41 +69,34 @@ function SearchResults (){
 
             <div className = {styles.formBox}>
 
-            <FormControl component="fieldset">
-           
-            <RadioGroup aria-label="date-posted" name="date" onChange = {(e) => setDate(e.target.value)}>
-                <FormControlLabel value="all" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>All</span>}  className = {styles.formElement}/>
-                <FormControlLabel value="24" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>Last 24 hours</span>}  className = {styles.formElement}/>
-                <FormControlLabel value="7" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>Last 7 Days</span>}  className = {styles.formElement}/>
-                <FormControlLabel value="28" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>Last 28 Days</span>}  className = {styles.formElement}/>
-               
-            </RadioGroup>
-            </FormControl>         
+            
             </div>     
            
         </CardContent>
       
         </Card>
+       
         </div>
+        </div>
+        </Grid>
+           <Grid item lg={4}>
+                    <div>
 
-           
-            <div>
-
-             {contract === "all" && filteredData.map(data=>(
-                <div>{data.profile_name}</div>
+             {contract === "all" && filteredData.map(datas=>(
+                <div>  <FilteredCard data={datas} /></div>
 
             ))}
-
+            
             {contract === "fullTime" && permanentJob.map(job => {
-                return <div>{job.job_type}</div>
+                return <div>  <FilteredCard data={job} /></div>
             })}
 
             {contract === "contract" && internationalJob.map(job => {
-                return <div>{job.job_type}</div>
+                return <div>  <FilteredCard data={job} /></div>
             })}
 
             {contract === "remotePartTime" && remoteJob.map(job => {
-                return <div>{job.job_type}</div>
+                return <div>  <FilteredCard data={job} /></div>
             })}
 
             {contract === "temporary"  && <h1>Jobs not available..</h1>}
@@ -112,15 +106,7 @@ function SearchResults (){
 
 
             </div>
-            
-        </div>
-
-        </Grid>
-
-        <Grid item sm={6} md={6} lg={6}>
-            <FilteredCard data={filteredData} />
-
-        </Grid>
+</Grid>
 </Grid>
         </>
     )
