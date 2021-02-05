@@ -14,12 +14,17 @@ function Google ({className}){
     const successGoogle=(response)=>{
       //  console.log(response.Fs)
       dispatch(googleAuthSuccess(response.Fs))
+      history.push('/jobs')
        
     }
     const failureGoogle=(response)=>{
         console.log(response.Fs)
         dispatch(googleAuthFailure(response))
+<<<<<<< HEAD
         history.push("/jobs")
+=======
+
+>>>>>>> 1c61d01853754f9bf9af0a40efea0fcc8e36e189
     }
     return(
         <>

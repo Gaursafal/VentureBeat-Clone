@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from "react"
-import {useSelector} from "react-redux"
-import styles from "../Css/jobsPage.module.css"
-import {Typography} from "@material-ui/core"
-=======
-import React, {useState, useEffect} from "react"
-import {useDispatch,useSelector} from "react-redux"
+import React, {useState, useEffect} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -20,35 +13,34 @@ import styles from '../Css/JobFilter.module.css'
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
->>>>>>> 1c61d01853754f9bf9af0a40efea0fcc8e36e189
 
-function SearchResults (){
-    var filteredData= useSelector(state=>state.jobs.filteredData)
-    
-    const [date, setDate] = useState('')
-    const [contract, setContract] = useState('all')
-    const permanentJob = filteredData.filter(job => job.job_type === "Permanent Job")
-    const internationalJob = filteredData.filter(job => job.job_type === "International")
-    const remoteJob = filteredData.filter(job => job.job_type === "Work From Home")
-   
-    console.log(filteredData)
-    return(
-        <>
-        <div style = {{display:"flex"}}>
+const useStyles = makeStyles({
+    root: {
+      maxWidth: 325,
+      margin:"30px",
+      display:"flex",
+      flexDirection:"column",
+      alignItems:"left",
+      background:"rgb(250,250,250)",
+      fontSize:"12px",
+      color:"rgb(37, 37, 37)",
+      fontWeight:"400"
+    }
 
+  });
+  
+
+function JobsFilter() {
+const classes = useStyles();
+const [date, setDate] = useState('')
+const [contract, setContract] = useState('')
+
+console.log(contract)
+console.log(date)
+
+
+    return (
         <div>
-<<<<<<< HEAD
-            {filteredData.map(data=>(
-                
-                <div className={styles.jobsSearchCard} key={data.job_id}>
-                <img className={styles.jobsImg} src="https://dy793rr2xtptx.cloudfront.net/images2/topic/new/johnson-controls-logo-1612350900919.png" alt="heins" />
-                <div className={styles.jobs}>
-                    <Typography variant="h6">{data.profile_name}</Typography>
-                    <Typography variant="body2">{data.company_name}</Typography>
-                    <Typography variant="body2">{data.location}</Typography>
-                </div>
-            </div>
-=======
              <Card className={styles.root}>
             <CardContent>
             <CardActions>
@@ -71,7 +63,7 @@ function SearchResults (){
             </div>               
         </CardContent>    
         </Card>
-        <Card className={styles.root}>
+        <Card className={classes.root}>
             <CardContent>
             <CardActions>
             <Typography variant = "p" className = {styles.subHeading}>Date Posted</Typography>
@@ -95,39 +87,6 @@ function SearchResults (){
       
         </Card>
         </div>
-
-           
-            <div>
-
-             {contract === "all" && filteredData.map(data=>(
-                <div>{data.profile_name}</div>
->>>>>>> 1c61d01853754f9bf9af0a40efea0fcc8e36e189
-
-            ))}
-
-            {contract === "fullTime" && permanentJob.map(job => {
-                return <div>{job.job_type}</div>
-            })}
-
-            {contract === "contract" && internationalJob.map(job => {
-                return <div>{job.job_type}</div>
-            })}
-
-            {contract === "remotePartTime" && remoteJob.map(job => {
-                return <div>{job.job_type}</div>
-            })}
-
-            {contract === "temporary"  && <h1>Jobs not available..</h1>}
-            {contract === "internship"  && <h1>Jobs not available..</h1>}
-            {contract === "partTime"  && <h1>Jobs not available..</h1>}
-            {contract === "flexible"  && <h1>Jobs not available..</h1>}
-
-
-            </div>
-            
-        </div>
-        </>
     )
 }
-
-export default SearchResults
+export default JobsFilter
