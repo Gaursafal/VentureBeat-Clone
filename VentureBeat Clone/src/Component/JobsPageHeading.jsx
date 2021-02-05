@@ -8,6 +8,7 @@ import styles from "../Css/jobsPage.module.css"
 import {useDispatch,useSelector} from "react-redux"
 import { getJobsData,jobsDataFiltered } from "../redux/JobsRedux/actionCreate";
 import JobsCard from "./jobsCard"
+import Navbar from "./Navbar";
 // import {getJobsData} from "../../redux/JobsRedux/actionCreate"
 const Heading=Styled.div`
 margin-top:50px;
@@ -77,8 +78,9 @@ function PageHead (){
    
     return(
     <>
+    
     <div  className={classes.root} className={styles.backgroundImg}>
-        <br/>
+        <div><Navbar/></div><br/>
         <Heading>VentureBeat Careers</Heading>
         <SearchBox>
         <form >

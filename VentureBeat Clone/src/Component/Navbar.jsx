@@ -46,11 +46,7 @@ export default function Navbar() {
                       <Link to= "/jobs"> <Typography variant="h6" color = "inherit"  className={classes.typo}> Jobs </Typography></Link>
                       <Link to = "/issues"> <Typography variant="h6" color = "inherit"  className={classes.typo}> Special Issue </Typography></Link>
                       <Link to="/member"> <Typography variant="h6" color = "inherit"  className={classes.typo1}> Become a Member |</Typography></Link>
-<<<<<<< HEAD
-                      <Link to = "/signin"> <Typography variant="h6" color = "inherit"  className={classes.typo}> {!isAuth?"Sign in":"Sign out"} </Typography></Link>
-=======
                       <Link to="/signin"> <Typography variant="h6" color = "inherit"  className={classes.typo}> {!isAuth?"Sign in":"Sign out"} </Typography></Link>
->>>>>>> Loginpage
                         <IconButton edge="start" className={classes.menuButton}  aria-label="menu">
                             <MenuIcon />
                         </IconButton>

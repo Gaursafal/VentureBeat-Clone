@@ -17,8 +17,8 @@ export const JobCardInfo = ({item})=>{
                <div><h4>Description : {item.description}</h4></div>
                <div><h4>Role : {item.role}</h4></div>
                <div className = {styles.para}>
-                   <button ><>Save Job</></button>
-                   <button className = {styles.redback}><>Apply</></button>
+                   <button className = {styles.button}><>Save Job</></button>
+                   <button className = {styles.button2}><div className = {styles.redback}>Apply</div></button>
                </div>
             </header>
             <div className = {styles.cont}>
@@ -32,7 +32,9 @@ export const JobCardInfo = ({item})=>{
                 </ul>
             </div>
                 <div className = {styles.header} >
-                    <button className = {styles.redback}>Apply</button>
+                    <button className = {styles.button2}>
+                        <div className = {styles.redback}>Apply</div>
+                        </button>
                 </div>
         </div>
     )

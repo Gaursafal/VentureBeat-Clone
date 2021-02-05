@@ -17,12 +17,15 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 import FilteredCard from "./JobsfilterCards";
 import SearchBar from "./SearchBar"
+import { JobCardInfo } from "./JobCardInfo";
+import Navbar from "./Navbar";
 
 function SearchResults (){
-    var filteredData= useSelector(state=>state.jobs.filteredData)
+    const filteredData= useSelector(state=>state.jobs.filteredData)
     
     const [date, setDate] = useState('')
     const [contract, setContract] = useState('all')
+    const [item,setItem] = useState(filteredData[0])
 
     const permanentJob = filteredData.filter(job => job.job_type === "Permanent Job")
     const internationalJob = filteredData.filter(job => job.job_type === "International")
@@ -34,10 +37,12 @@ function SearchResults (){
     }
     return(
         <>
+        <Navbar/>
         <SearchBar/>
-<br/>
-<Grid container spacing={1}>
-    <Grid item sm={6} md={3} lg={3}>
+<br/>  
+   <div style = {{float:"left"}}>   
+<Grid container spacing={50}>
+    <Grid item sm={3} md={3} lg={7}>
 
 
 
@@ -73,20 +78,20 @@ function SearchResults (){
                     <div>
 
              {contract === "all" && filteredData.map(datas=>(
-                <div>  <FilteredCard data={datas} /></div>
+                <div onClick = {()=>handleItem(datas)}>  <FilteredCard data={datas} /></div>
 
             ))}
             
             {contract === "fullTime" && permanentJob.map(job => {
-                return <div>  <FilteredCard data={job} /></div>
+                return <div onClick = {()=>handleItem(job)}>  <FilteredCard data={job} /></div>
             })}
 
             {contract === "contract" && internationalJob.map(job => {
-                return <div>  <FilteredCard data={job} /></div>
+                return <div onClick = {()=>handleItem(job)}>  <FilteredCard data={job} /></div>
             })}
 
             {contract === "remotePartTime" && remoteJob.map(job => {
-                return <div>  <FilteredCard data={job} /></div>
+                return <div onClick = {()=>handleItem(job)}>  <FilteredCard data={job} /></div>
             })}
 
             {contract === "temporary"  && <h1>Jobs not available..</h1>}
@@ -97,7 +102,17 @@ function SearchResults (){
 
             </div>
 </Grid>
+
 </Grid>
+</div>
+        <Grid>
+        <div className = {styles.card}>
+            <div>
+               <JobCardInfo item = {item}/> 
+            </div>
+            
+        </div>
+        </Grid>
         </>
     )
 }
