@@ -5,13 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import {useHistory} from "react-router-dom"
 import styles from "../Css/jobsPage.module.css"
 import {useDispatch,useSelector} from "react-redux"
-<<<<<<< HEAD:VentureBeat Clone/src/components/jobsPage/jobsPageHeading.jsx
-// import {getJobsData} from "../../redux/JobsRedux/actionCreate.js"
-import {getJobsData} from '../../Redux/JobsRedux/actionCreate.js'
-=======
 import { getJobsData,jobsDataFiltered } from "../Redux/JobsRedux/actionCreate";
 // import {getJobsData} from "../../redux/JobsRedux/actionCreate"
->>>>>>> 289d03766b5aadee651f35a502672c59abb0b6fc:VentureBeat Clone/src/Component/JobsPageHeading.jsx
 const Heading=Styled.div`
 margin-top:50px;
 text-align:center;
