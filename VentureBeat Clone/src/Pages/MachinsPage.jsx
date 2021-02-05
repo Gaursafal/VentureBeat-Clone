@@ -45,7 +45,7 @@ export const MachinsPage = ()=>{
                 <div>
                     <Navbar/>
                 </div>
-                <h1 className = {styles.heading}>The Machins</h1>
+                <h1 className = {styles.heading}>The Machine</h1>
                 </>
                 <div className = {styles.clear}></div>
                 <div className = {styles.body1}>

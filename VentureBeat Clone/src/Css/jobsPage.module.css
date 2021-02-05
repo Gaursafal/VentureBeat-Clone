@@ -90,9 +90,8 @@
     background-color:#1b5e20;
 }
 .cardClass{
-    border:1px solid green;
-    margin-top: 40px;
     
+    margin-top: 40px;
     margin-right: 30px;
     width:100%;
     
@@ -236,7 +235,7 @@
 .icon{
     margin-top: 35px;
     float:right;
-    margin-left:10%
+    
 }
 .linkIcon{
     color: white;
