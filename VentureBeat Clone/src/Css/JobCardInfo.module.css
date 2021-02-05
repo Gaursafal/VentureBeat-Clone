@@ -3,8 +3,6 @@
     border: solid 0.5px grey;
     border-radius: 15px;
     float:right;
-    position: sticky;
-    top: 60px
 }
 .flex{
     display: flex;
