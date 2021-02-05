@@ -1,11 +1,13 @@
 
-import Login from "./components/jobsPage/jobsPageHeading";
+import './App.css';
+
+import { Routes } from './Routes/Route';
 
 function App() {
   return (
     <div className="App">
-        <Login/>
-
+      {/* <h1>VentureBeat</h1> */}
+      <Routes/>
     </div>
 
   );
