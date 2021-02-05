@@ -1,8 +1,6 @@
-import React, {useState, useEffect} from "react"
-import {useDispatch,useSelector} from "react-redux"
+import React, {useState, useEffect} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-
-import {Card,Grid} from '@material-ui/core';
+import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
@@ -15,31 +13,33 @@ import styles from '../Css/JobFilter.module.css'
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
-import FilteredCard from "./JobsfilterCards";
-import SearchBar from "./SearchBar"
 
-function SearchResults (){
-    var filteredData= useSelector(state=>state.jobs.filteredData)
-    
-    const [date, setDate] = useState('')
-    const [contract, setContract] = useState('all')
+const useStyles = makeStyles({
+    root: {
+      maxWidth: 325,
+      margin:"30px",
+      display:"flex",
+      flexDirection:"column",
+      alignItems:"left",
+      background:"rgb(250,250,250)",
+      fontSize:"12px",
+      color:"rgb(37, 37, 37)",
+      fontWeight:"400"
+    }
 
-    const permanentJob = filteredData.filter(job => job.job_type === "Permanent Job")
-    const internationalJob = filteredData.filter(job => job.job_type === "International")
-    const remoteJob = filteredData.filter(job => job.job_type === "Work From Home")
-   
-    console.log(filteredData)
-    return(
-        <>
-        <SearchBar/>
-<br/>
-<Grid container spacing={1}>
-    <Grid item sm={6} md={3} lg={3}>
+  });
+  
+
+function JobsFilter() {
+const classes = useStyles();
+const [date, setDate] = useState('')
+const [contract, setContract] = useState('')
+
+console.log(contract)
+console.log(date)
 
 
-
-        <div style = {{display:"flex"}}>
-
+    return (
         <div>
              <Card className={styles.root}>
             <CardContent>
@@ -62,41 +62,31 @@ function SearchResults (){
            </FormControl>             
             </div>               
         </CardContent>    
-        </Card> 
+        </Card>
+        <Card className={classes.root}>
+            <CardContent>
+            <CardActions>
+            <Typography variant = "p" className = {styles.subHeading}>Date Posted</Typography>
+            </CardActions>
+
+            <div className = {styles.formBox}>
+
+            <FormControl component="fieldset">
+           
+            <RadioGroup aria-label="date-posted" name="date" onChange = {(e) => setDate(e.target.value)}>
+                <FormControlLabel value="all" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>All</span>}  className = {styles.formElement}/>
+                <FormControlLabel value="24" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>Last 24 hours</span>}  className = {styles.formElement}/>
+                <FormControlLabel value="7" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>Last 7 Days</span>}  className = {styles.formElement}/>
+                <FormControlLabel value="28" control={<Radio />}  label={<span style={{ fontSize: '12px' }}>Last 28 Days</span>}  className = {styles.formElement}/>
+               
+            </RadioGroup>
+            </FormControl>         
+            </div>     
+           
+        </CardContent>
+      
+        </Card>
         </div>
-        </div>
-        </Grid>
-           <Grid item lg={4}>
-                    <div>
-
-             {contract === "all" && filteredData.map(datas=>(
-                <div>  <FilteredCard data={datas} /></div>
-
-            ))}
-            
-            {contract === "fullTime" && permanentJob.map(job => {
-                return <div>  <FilteredCard data={job} /></div>
-            })}
-
-            {contract === "contract" && internationalJob.map(job => {
-                return <div>  <FilteredCard data={job} /></div>
-            })}
-
-            {contract === "remotePartTime" && remoteJob.map(job => {
-                return <div>  <FilteredCard data={job} /></div>
-            })}
-
-            {contract === "temporary"  && <h1>Jobs not available..</h1>}
-            {contract === "internship"  && <h1>Jobs not available..</h1>}
-            {contract === "partTime"  && <h1>Jobs not available..</h1>}
-            {contract === "flexible"  && <h1>Jobs not available..</h1>}
-
-
-            </div>
-</Grid>
-</Grid>
-        </>
     )
 }
-
-export default SearchResults
+export default JobsFilter
