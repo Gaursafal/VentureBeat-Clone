@@ -17,7 +17,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import RssFeedIcon from '@material-ui/icons/RssFeed';
-
+import Container from '@material-ui/core/Container'
 const useStyles = makeStyles((theme) => ({
    root:{flexGrow:1},
     typo: {
@@ -58,9 +58,10 @@ function JobsCard (){
 
 {/* Card 1 Start */}
 <div className={styles.cardClass}>
-    
-<Grid container spacing={1}>
+<Container>
 
+
+<Grid container spacing={1}>
 
 <Grid item xs={12} sm={12} md={6} lg={4}>
     <Card className={classes.card}>
@@ -243,7 +244,7 @@ function JobsCard (){
     </Card>
     </Grid>
     </Grid>
-  
+    </Container>
 </div>
 {/* Card 2 End */}
 

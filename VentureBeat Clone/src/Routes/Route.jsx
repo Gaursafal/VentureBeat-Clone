@@ -10,6 +10,7 @@ import { GamesPage } from '../Pages/GamesPage';
 import { HomePage } from '../Pages/HomePage';
 import { MachinsPage } from '../Pages/MachinsPage';
 import SearchResults from "../Component/jobsSearchResult"
+import SpecialIssue from '../Pages/SpecialIssue'
 
 
 export const Routes = ()=>{
@@ -24,6 +25,7 @@ export const Routes = ()=>{
             <Route path = "/signin" exact render = {()=><Login/>}/>
             <Route path = "/member"  render = {()=><Login/>}/>
             <Route path = "/searchResults" exact render = {()=><SearchResults/>}/>
+            <Route path = "/issues" exact render = {()=><SpecialIssue/>}/>
         </div>
     )
 }

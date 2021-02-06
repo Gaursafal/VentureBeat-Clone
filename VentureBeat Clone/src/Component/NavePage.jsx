@@ -35,11 +35,11 @@ export default function Navpage() {
         <div>
             
             <div className={classes.root}>
-                <div className={classes.container} style={{ backgroundColor: "#1a237e" }}>
+                <div className={classes.container} style={{ backgroundColor: "rgb(23,41,86)" }}>
                     <div><Navbar/></div>
                     <div className = {classes.div}>
                         <div className = {classes.amazon}>
-                            <img width="800px" height = "500px" src="https://venturebeat.com/wp-content/uploads/2019/12/amazon-logo-reuters.jpg?resize=700%2C350&strip=all" alt="amazon" />
+                            <img width="800px" height = "500px" src="https://venturebeat.com/wp-content/uploads/2021/02/Jared-Spataro-e1612526196407.jpg?resize=700%2C350&strip=all" alt="amazon" />
                             <h1>Jeff Bezos announces plan to  step <br /> down as CEO, as Amazon's Q4 <br /> revenue eclipses $100 billion</h1>
                         </div>
                         <div className = {classes.rightCon}>

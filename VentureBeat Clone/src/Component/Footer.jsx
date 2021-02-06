@@ -9,7 +9,7 @@ import styles from "../Css/Footer.module.css"
 const Footer = () => {
     return (
         <div>
-            <div className={styles.container}>
+            <div className={styles.container} >
                 <div className = {styles.top}>
                     <h1 style = {{fontSize : "55px"}}>VB</h1>
                     <div className = {styles.icon}>

@@ -27,14 +27,14 @@ export default function Navbar() {
                         <Link to="/"><img width = "200px" src = {logo}/> </Link>
                         </div>
                         <div className = {styles.links}>
-                      <Link to="/machin">  <Typography variant="h6" color = "inherit" > The Machine </Typography></Link>
+                      <Link to="/machine">  <Typography variant="h6" color = "inherit" > The Machine </Typography></Link>
                       <Link to="/games"> <Typography variant="h6" color = "inherit" > GamesBeat </Typography></Link>
                       <Link to= "/jobs"> <Typography variant="h6" color = "inherit" > Jobs </Typography></Link>
                       <Link to = "/issues"> <Typography variant="h6" color = "inherit" > Special Issue </Typography></Link>
                         </div>
                         <div className = {styles.member}>
                       <Link to="/member"> <Typography variant="h6" color = "inherit"  > Become a Member |</Typography></Link>
-                      <Link> <Typography variant="h6" color = "inherit" > {!isAuth?"Sign in":"Sign out"} </Typography></Link>
+                      <Link to = "/signin"> <Typography variant="h6" color = "inherit" > {!isAuth?"Sign in":"Sign out"} </Typography></Link>
                         </div>
                         
                 </Container>
