@@ -1,3 +1,4 @@
+
 import {React,useState,useEffect} from "react"
 import {styled, TextField,Grid,Button} from "@material-ui/core"
 import Styled from "styled-components"
@@ -7,32 +8,12 @@ import {useHistory} from "react-router-dom"
 import styles from "../Css/jobsPage.module.css"
 import {useDispatch,useSelector} from "react-redux"
 import { getJobsData,jobsDataFiltered } from "../Redux/JobsRedux/actionCreate";
-import JobsCard from "./jobsCard"
-import Navbar from "./Navbar";
-// import {getJobsData} from "../../redux/JobsRedux/actionCreate"
-const Heading=Styled.div`
-margin-top:50px;
-text-align:center;
-font-size:25px;
-padding:10px;
-color:white;
-`
-
-const Submit =Styled.input`
-background-color:red;
-width:100%;
-border:hidden;
-padding:2px;
-color:white;
-border-radius:5px;
-
-`
 const SearchBox=Styled.div`
     margin-top:100px;
     background-color:white;
     padding:20px;    
     width:70%;
-    border:1px solid black;
+   
     margin-left:auto;
     margin-right:auto;
     justify-Content:center;   
@@ -48,13 +29,10 @@ const useStyles = makeStyles((theme) => ({
     width:"100%",
     
   }
+}))
   
  
-  
-}));
-
-
-function PageHead (){
+function SearchBar (){
     const classes = useStyles();
     const [title,setTitle]=useState("")
     const [location,setLocation]=useState("")
@@ -72,19 +50,13 @@ function PageHead (){
         //data filtering
         const filteredData=jobsData.filter(el=>el.profile_name === title || el.location === location)
         dispatch(jobsDataFiltered(filteredData))
-        history.push("/searchResults")
     }
 
    
     return(
-    <>
-    
-    <div  className={classes.root} className={styles.backgroundImg}>
-        <div><Navbar/></div><br/>
-        <Heading>VentureBeat Careers</Heading>
-        <SearchBox>
+    <SearchBox>
         <form >
-        <Grid container spacing={1}>
+        <Grid container spacing={2}>
 
 
             <Grid item xs={12} sm={12} md={5} lg={5}>
@@ -102,14 +74,10 @@ function PageHead (){
         </Button>
        </Grid>
 
-</Grid>
+        </Grid>
         </form>
         </SearchBox>
-    </div>
-      <JobsCard/>
-    
-    </>
-    )
+        )
 }
-export default PageHead
-//https://dy793rr2xtptx.cloudfront.net/images2/topic/new/venturebeat-banner-1552689220310.jpg
+
+export default SearchBar

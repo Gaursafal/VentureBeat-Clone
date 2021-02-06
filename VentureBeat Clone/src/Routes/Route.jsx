@@ -16,13 +16,13 @@ export const Routes = ()=>{
     return(
         <div>
             <Route path = "/" exact render = {()=><HomePage/>}/>
-            <Route path = "/machin" exact render = {()=><MachinsPage/>}/>
+            <Route path = "/machine" exact render = {()=><MachinsPage/>}/>
             <Route path = "/jobs" exact render = {()=><PageHead/>}/>
             <Route path = "/games" exact render = {()=><GamesPage/>}/>
             <Route path = "/ai/:id" exact render = {(props)=><CradItem {...props}/>}/>
             <Route path = "/machin/discover" exact render = {()=><Discover/>}/>
             <Route path = "/signin" exact render = {()=><Login/>}/>
-            <Route path = "/member" exact render = {()=><Login/>}/>
+            <Route path = "/member"  render = {()=><Login/>}/>
             <Route path = "/searchResults" exact render = {()=><SearchResults/>}/>
         </div>
     )

@@ -18,43 +18,58 @@
   color: white !important;
 
 }
-.header div {
-  float: left;
-  cursor: pointer;
+.clear{
+    clear: both;
 }
-.body1 {
-  width: 60%;
-  margin: 20px 35px;
-  font-size: 50px;
-  font-style: oblique;
-  font-weight: bolder;
+.header{
+    
+    width: 100%;
+    height: 800px;
+    background-color: rgb(2, 39, 39);
+    color: white !important;
 }
-.body1 img {
-  width: 100%;
+.header  div{
+    float: left;
+    cursor: pointer;
 }
-.body2 {
-  width: 30%;
-  margin-left: 25px;
-  font-size: 30px;
-  font-weight: 400;
+.body1{
+    width: 60%;
+    margin: 20px 35px ;
+    font-size: 50px;
+    font-style: oblique;
+    font-weight: bolder;
+    
+
 }
-.body2 img {
-  width: 80%;
+.body1 img{
+    width: 100%;;
 }
-.body {
-  width: 100%;
-  height: 200px;
-  text-align: center;
-  background-color: rgba(19, 99, 99, 0.767);
-  color: white;
-  font-weight: bold;
+.body2{
+    width: 30%;
+    margin-left: 25px;
+    font-size: 30px;
+    font-weight: 400;
+    
+
 }
-.body button {
-  margin: 10px;
-  background-color: rgb(2, 39, 39);
-  color: white;
-  height: 50px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
+.body2 img{
+    width: 80%;;
+}
+.body{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: rgba(19, 99, 99, 0.767);
+    color: white;
+    font-weight: bold;
+}
+.body button{
+    margin: 10px;
+    background-color:rgb(2, 39, 39) ;
+    color: white;
+    height: 50px;
+    text-align: center;
+    
+    font-size: 18px;
+    font-weight: bold;
 }

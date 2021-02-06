@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import styles from '../Css/Machins.module.css'
 import {useDispatch, useSelector} from 'react-redux';
-import { machinData}  from '../Redux/Machins/action.js';
+// import { machinData}  from '../Redux/Machins/action';
 import { Link, Route, useHistory } from 'react-router-dom';
 import { NewsCard } from '../Component/NewsCard';
 import Footer from '../Component/Footer';
 import Navbar from '../Component/Navbar';
+import { machinData } from '../Redux/Machins/action';
 
 export const MachinsPage = ()=>{
     const button = ["Computer Vision",
@@ -44,8 +45,7 @@ export const MachinsPage = ()=>{
                 <div style = {{ display:"flex", justifyContent:"center", alignItems:"center", width:"100%"}}>
                     <Navbar/>
                 </div>
-
-                <h1 className = {styles.heading}>The Machins</h1>
+                <h1 className = {styles.heading}>The Machine</h1>
                 </>
                 <div className = {styles.clear}></div>
                 <div className = {styles.body1}>
