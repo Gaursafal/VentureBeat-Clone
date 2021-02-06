@@ -1,0 +1,35 @@
+.formBox {
+  display: flex;
+  flex-direction: column;
+  padding: 0px !important;
+  margin: 10px !important;
+}
+.root {
+  min-width: 265px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background: "rgb(250,250,250)";
+  font-size: 12px !important;
+  color: rgb(37, 37, 37);
+  font-weight: 400;
+}
+
+.formElement {
+  height: 28px !important;
+
+  font-size: 12px !important;
+  font-weight: 100 !important;
+}
+
+.formElement label {
+  font-size: 12px !important;
+  font-weight: 100 !important;
+}
+.subHeading {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(37, 37, 37);
+  font-family: sans-serif;
+}

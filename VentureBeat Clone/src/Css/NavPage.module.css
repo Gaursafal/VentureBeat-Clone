@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(23, 41, 86);
+  border: 3px solid red;
+}
+
+/* @media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+} */
+    
+.leftBox {
+  width: 60%;
+  border: 2px solid green;
+}
+.leftBox1__image {
+}
+.leftBox1__image img {
+  width: 80%;
+  height: auto;
+}
+.leftBox1__image h1 {
+  width: 80%;
+  color: white;
+  font-size: 38px;
+}
+
+.rightBoxWrapper {
+  width: 40%;
+  border: 2px solid blue;
+}
+.rightBox1 {
+}
+.rightBox1 img {
+  width: 70%;
+}
+.rightBox1 h1 {
+  font-size: 26px;
+  color: white;
+  width: 80%;
+}
+.rightBox2 {
+}
+.rightBox2 img {
+  width: 70%;
+}
+.rightBox2 h1 {
+  font-size: 26px;
+  color: white;
+  width: 80%;
+}
