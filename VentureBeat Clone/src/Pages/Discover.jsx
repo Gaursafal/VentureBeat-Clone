@@ -27,7 +27,7 @@ export const Discover = ()=>{
     },[])
     return(
         <>
-       <div >
+       <div style = {{background:"rgb(26,35,126)"}}>
            <Navbar/>
        </div>
         <div>
