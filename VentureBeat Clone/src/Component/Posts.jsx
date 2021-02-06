@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from "@material-ui/core";
 import {useSelector, useDispatch} from 'react-redux'
-import { getPosts } from "../redux/PostsRedux/actionCreator";
+import { getPosts } from "../Redux/PostsRedux/actionCreator";
 import { useHistory } from "react-router-dom";
 // import {getPosts} from '../Redux/actionCreator'
 

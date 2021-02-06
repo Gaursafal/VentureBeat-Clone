@@ -7,7 +7,7 @@ import {useHistory} from "react-router-dom"
 
 import styles from "../Css/jobsPage.module.css"
 import {useDispatch,useSelector} from "react-redux"
-import { getJobsData,jobsDataFiltered } from "../redux/JobsRedux/actionCreate";
+import { getJobsData,jobsDataFiltered } from "../Redux/JobsRedux/actionCreate";
 const SearchBox=Styled.div`
     margin-top:100px;
     background-color:white;

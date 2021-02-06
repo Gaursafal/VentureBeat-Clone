@@ -6,7 +6,7 @@ import { Link, Route, useHistory } from 'react-router-dom';
 import { NewsCard } from '../Component/NewsCard';
 import Footer from '../Component/Footer';
 import Navbar from '../Component/Navbar';
-import { machinData } from '../redux/Machins/action';
+import { machinData } from '../Redux/Machins/action';
 
 export const MachinsPage = ()=>{
     const button = ["Computer Vision",
