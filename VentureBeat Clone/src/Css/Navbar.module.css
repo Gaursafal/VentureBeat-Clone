@@ -1,0 +1,34 @@
+.navbar {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around;
+}
+.logo {
+  margin: 10px;
+}
+.navbar a {
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+  color: white;
+
+  line-height: 22px;
+  margin: 10px;
+  font-size: 16px;
+}
+@media (max-width: 1140px) {
+  .navbar a {
+    display: none;
+  }
+}
+.links {
+  display: flex;
+}
+
+.member {
+  display: flex;
+}
+.navIcon {
+  display: flex !important;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
