@@ -51,7 +51,7 @@ VentureBeat is the leading source for transformative tech news and events that p
 
 ## Contributors
 
-<h3>Safal Singh Gaur</h3> 👨‍ - <a href="https://github.com/Gaursafal">Krishna</a>
+<h3>Safal Singh Gaur</h3> 👨‍ - <a href="https://github.com/Gaursafal">Safal Singh</a>
 <h3>Faiz Ahmed</h3>👨‍- <a href="https://github.com/faizitguy" >Faiz</a>
 <h3>Bhupendra Simha</h3>👨‍ -  <a href="https://github.com/Bhupendrasimha">Bhupendra</a> 
 <h3>Krishna Sai</h3> 👨‍ - <a href="https://github.com/Krishnasai45">Krishna</a>
