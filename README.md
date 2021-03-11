@@ -2,7 +2,7 @@
 
 <div>
   <h3>
-In the project directory, tried to clone VentureBeat.com.  
+In the project directory, we cloned VentureBeat.com.  
 VentureBeat is the leading source for transformative tech news and events that provide deep context to help business leaders make smart decisions and stay on top of breaking news.
   </h3>
 </div>
@@ -51,6 +51,7 @@ VentureBeat is the leading source for transformative tech news and events that p
 
 ## Contributors
 
+<h3>Safal Singh Gaur</h3> 👨‍ - <a href="https://github.com/Gaursafal">Krishna</a>
 <h3>Faiz Ahmed</h3>👨‍- <a href="https://github.com/faizitguy" >Faiz</a>
 <h3>Bhupendra Simha</h3>👨‍ -  <a href="https://github.com/Bhupendrasimha">Bhupendra</a> 
 <h3>Krishna Sai</h3> 👨‍ - <a href="https://github.com/Krishnasai45">Krishna</a>
